@@ -1,0 +1,263 @@
+/* styles.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(96, 85, 80);
+    color: rgb(255, 188, 188);
+    padding: 20px;
+    position: fixed;
+    top: -60px; /* Initially hidden above the viewport */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+}
+
+.nav-visible {
+    top: 0; /* Show the nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 188, 188);
+}
+
+/* Profile image section */
+.profile-image-container {
+    position: relative;
+    width: auto;
+    max-width: 650px;
+    height: 560px;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.profile-image {
+    position: absolute;
+    top: 0; /* Anchor to the top */
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Initially visible */
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.2s ease-in-out; /* Slight transition for smoothness */
+    bottom: auto; /* Override any bottom positioning */
+}
+
+.profile-image-left {
+    position: absolute;
+    top: 0; /* Anchor to the top */
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    z-index: 3; /* Above the main image */
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out; /* Slight transition for smoothness */
+}
+
+.profile-image-right {
+    position: absolute;
+    top: 0; /* Anchor to the top */
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    z-index: 3; /* Above the main image */
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out; /* Slight transition for smoothness */
+}
+
+/* Swap image only on hover of .hand-left */
+.hand-left:hover + .profile-image-left {
+    opacity: 1; /* Fade in the swapped image on left hand hover */
+}
+
+.hand-left:hover ~ .profile-image {
+    opacity: 0; /* Fade out the original image on left hand hover */
+}
+
+.hand-right:hover + .profile-image-right {
+    opacity: 1; /* Fade in the swapped image on left hand hover */
+}
+
+.hand-right:hover ~ .profile-image {
+    opacity: 0; /* Fade out the original image on left hand hover */
+}
+
+
+@keyframes slideUp {
+    /* Keep it commented out or remove it entirely */
+    /* to {
+        bottom: 0;
+    } */
+}
+
+.background-overlay {
+    position: relative; /* instead of absolute */
+    width: 100%;
+    min-height: 100vh; /* this ensures it's at least full height of screen */
+    background: radial-gradient(circle at center, rgb(221, 207, 200), rgb(249, 242, 234));
+    z-index: 1;
+    padding-top: 3rem;
+}
+
+/* Hand Glow Interactions - Responsive */
+.hand-left,
+.hand-right {
+    position: absolute;
+    width: 26%; /* Percentage of container width */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1 / 1; /* Make it a square */
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hand-left {
+    left: 25%; /* Percentage of container width */
+    top: 55%; /* Percentage of container height */
+}
+
+.hand-right {
+    left: 62%; /* Percentage of container width */
+    top: 55%; /* Percentage of container height */
+}
+
+.hand-left-glow-back,
+.hand-left-glow-front,
+.hand-right-glow-back,
+.hand-right-glow-front {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.hand-left-glow-back {
+    left: calc(15% - 4%); /* Adjust to center behind hand (width/4) */
+    top: calc(52% - 4%); /* Adjust to center behind hand (height/4) */
+    width: 44%; /* Percentage of container width (bigger back glow) */
+    height: 44%; /* Percentage of container width (bigger back glow - maintain square) */
+    background-color: rgba(0, 149, 255, 0.386);
+    filter: blur(calc(24vw / 16)); /* Scale blur with viewport width */
+    z-index: 0;
+}
+
+.hand-left-glow-front {
+    left: 25%;
+    top: 62%;
+    width: 16%; /* Percentage of container width */
+    height: 16%; /* Percentage of container width */
+    background-color: rgba(0, 255, 255, 0.775);
+    filter: blur(calc(16vw / 20)); /* Scale blur with viewport width */
+    z-index: 4;
+}
+
+.hand-right-glow-back {
+    left: calc(52% - 4%); /* Adjust to center behind hand */
+    top: calc(52% - 4%); /* Adjust to center behind hand */
+    width: 44%; /* Percentage of container width (bigger back glow) */
+    height: 44%; /* Percentage of container width (bigger back glow - maintain square) */
+    background-color: rgba(255, 252, 77, 0.386);
+    filter: blur(calc(24vw / 16)); /* Scale blur with viewport width */
+    z-index: 0;
+}
+
+.hand-right-glow-front {
+    left: 62%;
+    top: 62%;
+    width: 16%; /* Percentage of container width */
+    height: 16%; /* Percentage of container width */
+    background-color: rgba(255, 252, 77, 0.756);
+    filter: blur(calc(16vw / 20)); /* Scale blur with viewport width */
+    z-index: 4;
+}
+
+/* Make entire hand areas clickable */
+.hand-left a,
+.hand-right a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: transparent;
+    z-index: 5;
+    position: relative;
+}
+
+/* Show glow on hover */
+.hand-left:hover ~ .hand-left-glow-back,
+.hand-left:hover ~ .hand-left-glow-front {
+    opacity: 1;
+}
+
+.hand-right:hover ~ .hand-right-glow-back,
+.hand-right:hover ~ .hand-right-glow-front {
+    opacity: 1;
+}
+
+/* disable the hover when the screen is 612 or less */
+@media (max-width: 612px) {
+    .hand-left:hover ~ .hand-left-glow-back,
+    .hand-left:hover ~ .hand-left-glow-front,
+    .hand-right:hover ~ .hand-right-glow-back,
+    .hand-right:hover ~ .hand-right-glow-front {
+        opacity: 0 !important; /* Disable the glow by setting opacity to 0 and overriding any inline styles */
+        pointer-events: none !important; /* Disable interaction with the glow elements */
+    }
+
+    .hand-left a,
+    .hand-right a {
+        pointer-events: none !important; /* Disable the anchor links */
+    }
+
+    .hand-left,
+    .hand-right {
+        cursor: default; /* Change cursor to indicate no interaction */
+    }
+}
+/* Intro text and content */
+.intro-text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(255, 188, 188);
+}
+
+.container {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.hero {
+    height: 400px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}

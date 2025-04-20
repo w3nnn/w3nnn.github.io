@@ -1,69 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Show Nav</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>⋆☆WENHAN MIAO☆⋆</h1>
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#creative">Creative + UX</a></li>
+                <li><a href="#dev">Dev + AI</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class=" grid-container">
+    <div class="background-overlay">
+        <div class="profile-image-container">
+            <img src="images/me.png" alt="My Profile" class="profile-image">
+            <!-- left hand hover anchor -->
+            <div class="hand-left">
+                <a href="#creative"></a>
+            </div>
+            <img src="images/meleft.png" alt="My Profile - HoverLeft" class="profile-image-left">
 
-        <div class = "intro">
-      
-            <p> Welcome to my portfolio! I am a passionate UI/UX designer with a keen interest in AI-related fields, currently pursuing my third year as an Interactive Arts and Technology major at Simon Fraser University. My professional journey has been marked by a commitment to creativity and hands-on design, blending artistic expression with practical application. </p>
+            <div class="hand-left-glow-back"></div>
+            <div class="hand-left-glow-front"></div>
 
-            <a href = "img/designresume.pdf" target="_blank"> →Resume</a>
 
-        </div>
+            <!-- right hand hover anchor -->
+            <div class="hand-right">
+                <a href="#dev"></a>
+            </div>
+            <img src="images/meright.png" alt="My Profile - HoverRight" class="profile-image-right">
+            <div class="hand-right-glow-back"></div>
+            <div class="hand-right-glow-front"></div>
 
-        <div id= "introimg" class = "intro intro-img">
-              <img src = "img/mebrown.webp" alt="image shows the personal brand logo of Wenhan Miao" width = "471" height = "512">
-              <p>^Click on me^</p>
-        </div>
-
-        <div class = "proj">
             
-            <h2 class= "darkfont">E-learning Module Design</h2>
-            <h3 class= "darkfont">City of Surrey</h3>
-            <p>Sept 2022-April-2023</p>
+        </div>
+
+        <div class = "intro-text">
+        <h2>Hi, I’m <a href = "about.html">Wenhan</a> — a designer who codes & a developer who designs.</h2>
+    </div>
+
         
-            <p>Designed 9 individual interactive modules using Articulate Storyline 360. Discussed with the interdisciplinary stakeholders regarding expectations and goals, and seek for for feedback throughout the building phase. Went through multiple variations of the design, and had a three step feedback process to solidify the interaction design(individual- team- stakeholders). Assisted the Learning and Development team with smaller projects on the side of the e-leaning module design project; such as brochure design, poster design, to a T-shirt design project with the Health& Safety department.</p>
 
-        
-            <a class="largelink in-text-link" href="visualizations.html">Assignments</a>
-
-        </div>
-
-        <div class = "moduleimg">
-            <img src = "img/usertesting.webp" alt="an image takes the user to the trial of one of the modules designed by me" width = "1542" height = "868">
-        </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-      
-        <div class = "footer-item">
-            <h2 class="footer-title">(Wenhan Miao)</h2>
-            <p class="copyright">&copy 2024 Wenhan Miao</p>
-        </div>
-
-        <div class="footer-item footer-nav">
-            <h3>Get In Touch</h3>
-            <a class="in-text-link" href="https://www.linkedin.com/in/w3nhan/">Linkedin</a>
-            <a class="in-text-link" href="https://github.com/w3nnn">GitHub</a>
-        </div>
-    
-  </footer>
-
-    <script src="main.js"></script>
+    </div>
 
     
+
+    <div class="hero">
+        <h1>Welcome!</h1>
+    </div>
+
+    
+
+    <div class="container">
+
+        <h1>Portfolio</h1>
+        <p>Looking to hire a developer? View all my previous work in web development, desktop applications, scripting and more!</p>
+
+        <p>Scroll down to see the navigation bar appear.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <section id="creative"> <!-- creative + UX content here --></section>
+    <h2>creative + UX content here</h2>
+
+
+<section id="dev"> <!-- frontend/backend/AI work --></section>
+<h2>creative + UX content here</h2>
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
