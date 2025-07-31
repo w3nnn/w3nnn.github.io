@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mushroom Identification AI Model Training - Wenhan Miao</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <header id="main-header">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#creative-projects">Creative + UX</a></li>
+        <li><a href="index.html#technical-projects">Dev + AI</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-page">
+    <section class="project-hero">
+      <h1>Mushroom Identification AI Model Training</h1>
+     <p class="subtitle">Developing a real-time computer vision model to detect and classify various mushroom species using image datasets.</p>
+      <div class="project-meta">
+        <span><strong>Role:</strong> Creative Coder, Data Labeler</span> |
+        <span><strong>Tools:</strong> YOLOv8, Roboflow, Python, OpenCV</span> |
+        <span><strong>Timeline:</strong> October 2024 – December 2024</span>
+      </div>
+
+
+    </section>
+
+    <section class="project-content">
+      <div class="content-text-block">
+        <h2>Project Overview</h2>
+        <p>
+            This project involved building a real-time mushroom detection and classification system using YOLOv8 and Roboflow. The primary goal was to identify different mushroom species from live camera footage, providing a potential tool for nature enthusiasts and foragers. The system is capable of detecting multiple mushroom types simultaneously and drawing bounding boxes around them in real-time.
+        </p>
+        </div>
+
+        <div class="content-text-block">
+        <h2>Model Development & Training</h2>
+        <p>
+            The project started by sourcing and preprocessing mushroom images, which were annotated and prepared in Roboflow for YOLOv8 training. Using the Ultralytics YOLOv8 framework in Python, we fine-tuned the model with transfer learning to improve mushroom detection accuracy. The trained model was then integrated into a real-time webcam pipeline with OpenCV, displaying bounding boxes and class labels on live video.
+        </p>
+        <p>
+            We optimized the model through iterative training, adjusting hyperparameters such as epochs, learning rate, batch size, and image augmentation to improve metrics like precision and mean average precision (mAP). Key improvements included using cosine learning rate scheduling, HSV augmentation, and increasing batch size to 16 to balance class predictions. Training beyond 8 epochs led to overfitting, so we settled on that as the optimal stopping point. The best model, from session six, achieved a precision of 0.8242 and a mAP50-95 of 0.6646, providing a robust foundation for real-time mushroom classification.
+        </p>
+        <p><strong>Final Hyperparameters:</strong> Epochs: 8; Patience: 5; Batch Size: 16; Learning Rate: 0.001; Cosine LR Scheduling: Enabled; HSV Augmentation: hsv_h=0.015, hsv_s=0.9, hsv_v=0.9.</p>
+        </div>
+
+
+        <div class="content-text-block">
+        <h2>Challenges & Solutions</h2>
+        <p>
+            One major challenge was the limited variety and quantity of annotated mushroom images, which initially caused lower detection accuracy. We addressed this by augmenting our dataset using Roboflow's preprocessing tools to increase image diversity. Another challenge was the speed-performance tradeoff in real-time detection. To resolve this, we optimized model size by selecting a lightweight YOLOv8 variant and reducing input resolution, which maintained acceptable accuracy while improving frame rates.
+        </p>
+        </div>
+
+        <div class="content-text-block">
+
+        <h2>Impact & Outcome</h2>
+
+        <div class="content-image">
+            <img src="images/mushroomCVGraphs.png" alt="Confusion matrix and PR graph of the mushroom detection output">
+            <p class="caption">Confusion matrix and Precision Recall graph of the final models.</p>
+        </div>
+
+
+        <div class="content-image">
+            <img src="images/mushroomCVResult.png" alt="Real-time mushroom detection output">
+            <p class="caption">Real-time mushroom detection output showing the ground truth and predicted bounding boxes.</p>
+        </div>
+        
+        <p>
+            The trained models reliably detect and classify various mushroom species in real-time. High image quality and targeted augmentation were key to handling varied lighting conditions, improving robustness. This project demonstrated the full YOLOv8 workflow—from data preparation with Roboflow to model deployment—and provided valuable hands-on experience with real-time computer vision applications.
+        </p>
+
+        
+        </div>
+
+    </section>
+  </main>
+
+  <div id="circularcursor"></div>
+
+  <footer id="contact"> <div class="footer-content">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:wenhanm@sfu.com" class="footer-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/w3nhan/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank" class="footer-link">GitHub</a>
+                </div>
+            <p class="copyright">&copy; 2025 Wenhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

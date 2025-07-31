@@ -17,7 +17,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#creative-projects">Creative + UX</a></li>
                 <li><a href="#technical-projects">Dev + AI</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="XD.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -44,8 +44,26 @@
 
         </div>
 
-        <div class = "intro-text">
-            <h2>Hi, I’m <a href = "about.html">Wenhan</a> — a designer who codes & a developer who designs.</h2>
+      <div class="intro-text">
+  <h2>
+    Hi, I’m <a href="about.html">Wenhan</a> — 
+    <a href="#creative-projects" class="dev-link dev-left">a designer who codes</a> & 
+    <a href="#technical-projects" class="dev-link dev-right">a developer who designs</a>.
+  </h2>
+</div>
+
+
+
+        <div  class="creative-header">
+            <h3>To do:</h3>
+
+            <li>Add Sunwise</li>
+            <li>Add HerbVita Youtube Link</li>
+            <li>Take packaging photos</li>
+            <li>Consistent wording, I, me, my team...</li>
+
+            <li>Add e-learning modules</li>
+            
         </div>
 
 
@@ -127,15 +145,7 @@
         <p> My skills are always evolving. If you need something beyond what's listed, I'm ready to learn!</p>
     </section>
 
-
-    <section class="featured-work-intro">
-  <h1>Featured Work</h1>
-  <p>From user-first design to full-stack development, here’s a selection of my most impactful and creative projects—organized into two core categories: Creative + UX and Dev + AI.</p>
-</section>
-
-
     <section id="creative-projects"> 
-        <h2>creative + UX content here</h2>
         <div class="creative-header">
 
               <div class="header-row">
@@ -143,7 +153,7 @@
 
             <img src="images/bubbleleft.png" alt="Left Bubble" class="bubble-left">
             
-            <h2>UI/UX & Visual Design</h2>
+            <h2>UI/UX, Branding & Visual Design</h2>
 
             
             <img src="images/bubbleright.png" alt="Right Bubble" class="bubble-right">
@@ -153,7 +163,9 @@
 
 
         <div class="project-list">
-        <div class="project-item" >
+
+            
+        <div class="project-item clickable-project" onclick="window.open('e-learning-module.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/eModule1.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -172,26 +184,27 @@
         </div>
 
         <!-- proj 2 -->
-         <div class="project-item" >
+        <div class="project-item clickable-project" onclick="window.open('tradeshow.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/tradeshow.png" alt="Trade Show Design Preview" class="project-screenshot">
                 </div>
             <div class="project-details">
                 <h3>Trade Show Design</h3>
                 <div class="project-tags">
+                    <span>Project Management</span>
                     <span>Visual Design</span>
                     <span>Print Design</span>
                     <span>Figma</span>
                     <span>2025</span>
                 </div>
             <p>Independently led the full design and execution of our CHFA Vancouver tradeshow presence—from signing up and coordinating logistics to designing all visual elements. I handled everything from booth layout, signage, packaging, and printed materials to planning, ordering, and setup, creating a cohesive, professional experience from start to finish.</p>
-            <a href="#" target="_blank" class="view-project-button">Learn More</a>
+            <a href="tradeshow.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
         <!-- proj three -->
 
-        <div class="project-item" >
+        <div class="project-item clickable-project" onclick="window.open('packageDesign.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/packageDesignn.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -201,10 +214,11 @@
                     <span>Package Design</span>
                     <span>Prototyping</span>
                     <span>Figma</span>
+                    <span>Adobe Suite</span>
                     <span>2025</span>
                 </div>
             <p>Designed two retail packages for a new line of products for a client, working from initial concept through prototyping. Ensured brand consistency and shelf appeal while meeting client goals and print requirements.</p>
-            <a href="e-learning-module.html" target="_blank" class="view-project-button">Learn More</a>
+            <a href="packageDesign.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
@@ -217,11 +231,8 @@
 
 
     <section id="technical-projects"> 
-    <h2>dev + AI content here</h2>
-
     
-        
-
+    
     <div class="creative-header">   
         <div class="header-row">
 
@@ -229,18 +240,18 @@
 
             
 
-            <img src="images/bubbleleft.png" alt="Left Bubble" class="bubble-left">
+            <img src="images/scribblesleft.png" alt="Left Scribble" class="bubble-left">
 
             <h2>Interactive & Data-Driven Systems</h2>
 
-            <img src="images/bubbleright.png" alt="Right Bubble" class="bubble-right">
+            <img src="images/scribblesright.png" alt="Right Scribble" class="bubble-right">
               </div>
 
             <p>Some of my recent technical, code-heavy projects</p>
         </div>
 
         <div class="project-list">
-        <div class="project-item" >
+        <div class="project-item clickable-project" onclick="window.open('herbvita.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/herbVita.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -251,17 +262,17 @@
                     <span>PHP</span>
                     <span>MySQL</span>
                     <span>Database Design</span>
-                    <span>User authentication</span>
+                    <span>User Authentication</span>
                     <span>AJAX</span>
                     <span>2025</span>
                 </div>
                 <p>Designed and developed both the front and backend of the Herb Vita herb database platform using PHP, MySQL, and JavaScript. Created the ER diagram, built the product database in phpMyAdmin, and implemented features such as weekly rotation, AJAX-powered search, user authentication, and order processing to ensure a seamless user experience.</p>
-             <a href="e-learning-module.html" target="_blank" class="view-project-button">Learn More</a>
+             <a href="herbvita.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
         <!-- proj 2 -->
-         <div class="project-item" >
+         <div class="project-item clickable-project" onclick="window.open('aura.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/aura.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -276,13 +287,13 @@
                     <span>2025</span>
                 </div>
              <p>Created a real-time audiovisual system using TouchDesigner for transparent LED screens. I designed a dynamic particle system that responds to both sound and motion, using Perlin noise, audio analysis, and camera input. The result is an immersive, evolving installation adaptable for performances and public spaces.</p>
-             <a href="#" target="_blank" class="view-project-button">Learn More</a>
+             <a href="aura.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
         <!-- proj three -->
 
-        <div class="project-item" >
+        <div class="project-item clickable-project" onclick="window.open('OverdoseVis.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/d3Vis.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -294,17 +305,16 @@
                     <span>Data Storytelling</span>
                     <span>Vega-Lite</span>
                     <span>Comparative Analysis</span>
-
                     <span>2024</span>
                 </div>
              <p>An interactive web visualization comparing overdose death trends (1980–2021) in Canada, USA, Netherlands, and China. Built with D3.js and Vega-Lite, featuring a custom YouDrawIt graph and policy markers to show the impact of drug laws on public health outcomes.</p>
-             <a href="e-learning-module.html" target="_blank" class="view-project-button">Learn More</a>
+             <a href="OverdoseVis.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
         <!-- proj four -->
 
-        <div class="project-item" >
+        <div class="project-item clickable-project" onclick="window.open('MushroomModelTraining.html', '_blank')">
                 <div class="project-image-wrapper">
                     <img src="images/mushroomCV.png" alt="FocusDev Dashboard Preview" class="project-screenshot">
                 </div>
@@ -313,11 +323,12 @@
                 <div class="project-tags">
                     <span>Computer Vision Model</span>
                     <span>Multi-Class Detection</span>
-                    <span>Figma</span>
-                    <span>2025</span>
+                    <span>YOLOv8</span>
+                    <span>Roboflow</span>
+                    <span>2024</span>
                 </div>
              <p>Developed a supervised learning mushroom detection and classification model using YOLOv8 and advanced data augmentation to enhance accuracy across diverse environmental conditions. Optimized for mobile devices, the model supports live detection via built-in cameras or image uploads, targeting amateur foragers and outdoor enthusiasts to aid safe and efficient mushroom identification during outdoor activities.</p>
-             <a href="e-learning-module.html" target="_blank" class="view-project-button">Learn More</a>
+             <a href="MushroomModelTraining.html" target="_blank" class="view-project-button">Learn More</a>
             </div>
         </div>
 
@@ -339,5 +350,7 @@
     </footer>
 
     <script src="script.js"></script>
+
+    
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization - Wenhan Miao</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#creative-projects">Creative + UX</a></li>
+                <li><a href="index.html#technical-projects">Dev + AI</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <section class="project-hero">
+    <h1>Overdose Deaths and Drug Policies</h1>
+    <p class="subtitle">A comparative data storytelling project using D3.js</p>
+    <div class="project-meta">
+        <span><strong>Role:</strong> Data Visualizer, D3 Developer</span> |
+        <span><strong>Tools:</strong> D3.js, Vega-Lite</span> |
+        <span><strong>Timeline:</strong> October 2024 – December 2024</span>
+    </div>
+    <div class="module-launch-wrapper">
+        <a href="https://chenny317.github.io/355_finalproject/" target="_blank" class="launch-module-button">
+            <img src="images/d3VisLanding.png" alt="Click to view the interactive D3 visualization" class="module-preview-img">
+            <span class="launch-text">View the Visualization</span>
+        </a>
+    </div>
+</section>
+
+<section class="project-content">
+    <div class="content-text-block">
+        <h2>Project Overview</h2>
+        <p>This interactive data visualization explores overdose death trends and drug policy shifts across four countries—Canada, USA, China, and the Netherlands—from 1980 to 2021. Using a “YouDrawIt” format, we aimed to engage users in predicting trends before revealing real data, encouraging deeper reflection on how legislation impacts public health.</p>
+    </div>
+
+   <div class="content-text-block">
+        <h2>Process Analysis & Design</h2>
+        <p>
+            We began by gathering data from credible government sources and experimenting with different visualization styles to identify the clearest way to present the information.
+        </p>
+        <div class="content-image">
+            <img src="images/d3VisExample.png" alt="Trend graph exploration examples">
+            <p class="caption">Initial trend graph format exploration using D3.</p>
+        </div>
+        <p>
+            After testing various options, we found line charts to be the clearest for comparing trends. To make the visualizations more engaging and insightful, we developed an interactive “You Draw It” feature that lets users sketch their own predictions before revealing the actual data alongside policy markers.
+        </p>
+        <p>
+            These interactive charts, designed in Figma and built with Vega-Lite and D3.js, effectively communicate overdose trends while encouraging user engagement and exploration.
+        </p>
+        <div class="content-image">
+            <img src="images/d3VisSite.png" alt="Design wireframe and trend graph examples">
+            <p class="caption">Initial wireframe site showing line graphs for overdose trends.</p>
+        </div>
+        </div>
+
+    <div class="content-text-block">
+        <h2>Challenges & Solutions</h2>
+        
+            <p>
+                Due to inconsistent and fragmented city-level data from the 1980s to the 2020s, we adjusted our original approach. After further research, we shifted the project focus to a country-level analysis and narrowed the timeframe to ensure consistency across all four countries. This change allowed us to work with more complete datasets and draw clearer comparisons between regions.
+            </p>
+
+            <p>
+                Building the “You Draw It” interaction in D3 came with its own challenges. The original version required users to draw the entire timeline, which some testers found confusing and overwhelming. To improve usability, we limited the drawing section to begin in 1993, giving users a clear starting point and allowing them to focus their predictions on later years. To avoid clutter, we chose to reveal policy markers only after the user completed their prediction and saw the actual data. Red dotted lines then appear to indicate when each policy was passed, helping users draw stronger correlations between legislation and trends.
+            </p>
+
+
+                
+        <div class="content-image">
+            <img src="images/d3VisCanada.png" alt="YouDrawIt interaction example in D3">
+            <p class="caption">The “YouDrawIt” feature invites users to guess trends before revealing actual data.</p>
+        </div>
+    </div>
+
+    <div class="content-text-block">
+        <h2>Impact & Outcome</h2>
+        <p>This project taught me how to combine storytelling, interactivity, and public health data to create more meaningful user engagement. I deepened my skills in D3.js, especially with custom SVG path manipulation and data-driven transitions.</p>
+        <p>Feedback from the course instructor was highly positive as it highlighted how the interactive format increased curiosity and understanding. This reinforced my belief that well-designed data experiences can drive public awareness and learning in ways that static charts cannot (learning through a form of play).</p>
+    </div>
+</section>
+
+    </main>
+
+    <div id="circularcursor"></div>
+
+    <footer id="contact"> <div class="footer-content">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:wenhanm@sfu.com" class="footer-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/w3nhan/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank" class="footer-link">GitHub</a>
+                </div>
+            <p class="copyright">&copy; 2025 Wenhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

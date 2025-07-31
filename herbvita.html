@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HerbVita - Wenhan Miao</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header id="main-header">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#creative-projects">Creative + UX</a></li>
+        <li><a href="index.html#technical-projects">Dev + AI</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-page">
+    <section class="project-hero">
+      <h1>HerbVita: Natural Remedies Education Platform</h1>
+      <p class="subtitle">Empowering users to explore herbal remedies through a custom-built database platform.</p>
+      <div class="project-meta">
+        <span><strong>Role:</strong> Full Stack Developer</span> |
+        <span><strong>Tools:</strong> PHP, MySQL, JavaScript, AJAX</span> |
+        <span><strong>Timeline:</strong> 2025</span>
+      </div>
+    </section>
+
+<section class="project-content">
+      <div class="content-text-block">
+        <h2>Project Overview</h2>
+        <p>HerbVita is an educational web application that allows users to explore medicinal herbs and their potential benefits. The website allows users to search for herbs, browse by categories based on common health concerns, explore weekly rotating featured herbs, and add comments on each herb’s detail page. Registered users can also save herbs to their personalized saved list.</p>
+        <p>This platform is non-commercial and designed primarily for information and learning purposes, with a user-friendly and responsive front-end experience.</p>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Development Process</h2>
+        <p>Our team used PHP and MySQL for backend development, AJAX and JavaScript for dynamic frontend features, and HTML/CSS for structure and design. We structured the database with five tables: <code>User</code>, <code>Herb</code>, <code>healthConcerns</code>, <code>Comments</code>, and <code>savedList</code>. We chose not to create a dedicated <code>featuredHerb</code> table, instead using date-based logic to rotate featured herbs weekly.</p>
+        <p>The herb data was sourced from <a href="https://medlineplus.gov/druginfo/herb_All.html " target="_blank">MedlinePlus</a> and entered manually into phpMyAdmin to maintain accuracy and structure.</p>
+
+        <div class="content-image">
+          <img src="images/herbvita-er-diagram.png" alt="HerbVita ER diagram" />
+          <p class="caption">Entity-Relationship diagram outlining the structure of the HerbVita database.</p>
+        </div>
+
+        <div class="content-image">
+          <img src="images/phpmyadmin-tables.png" alt="phpMyAdmin table structure" />
+          <p class="caption">phpMyAdmin view showing the structure of the five main tables: Comments, HealthConcerns, Herb, SavedList, and User.</p>
+        </div>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Key Features & Solutions</h2>
+        <ul>
+          <li><strong>Weekly Rotation:</strong> Featured herbs rotate automatically every week using date-based logic, removing the need for manual updates.</li>
+          <li><strong>User Authentication:</strong> Users can register, log in, and securely maintain sessions. Passwords are stored in hashed form to ensure security.</li>
+          <li><strong>User Interaction:</strong> Logged-in users can leave comments on herb pages, save herbs to their list, and associate their accounts with specific health concerns.</li>
+          <li><strong>Live Search with AJAX:</strong> The search bar supports live search with instant AJAX responses, limited to five results, to avoid overloading the page.</li>
+        </ul>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Challenges & Learning</h2>
+        <p>Creating a smooth flow of dynamic interaction using AJAX required thoughtful implementation. Debugging session handling across multiple pages helped improve our understanding of secure full-stack development.</p>
+        <p>Writing SQL queries that joined multiple tables, especially for user-specific content like saved herbs and comments, deepened our skills in relational database design.</p>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Outcome</h2>
+        <div class="content-image">
+          <img src="images/herbVita.png" alt="Final HerbVita homepage interface" />
+          <p class="caption">Final homepage design of the HerbVita platform.</p>
+        </div>
+        <p>HerbVita is a fully functioning web application that provides a useful and informative experience for users interested in herbal medicine. It incorporates backend logic, database management, dynamic client-side features, and responsive design. We successfully implemented core features like personalized herb saving, comment functionality, and weekly recommendations within a polished frontend.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="circularcursor"></div>
+
+  <footer id="contact"> <div class="footer-content">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:wenhanm@sfu.com" class="footer-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/w3nhan/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank" class="footer-link">GitHub</a>
+                </div>
+            <p class="copyright">&copy; 2025 Wenhan. All rights reserved.</p>
+        </div>
+    </footer>
+    
+  <script src="script.js"></script>
+</body>
+</html>

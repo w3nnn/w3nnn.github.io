@@ -2,6 +2,14 @@ const header = document.getElementById('main-header');
 let lastScrollTop = 0;
 let navVisible = false;
 
+const handLeft = document.querySelector('.hand-left');
+const handRight = document.querySelector('.hand-right');
+
+const devLeft = document.querySelector('.dev-left');
+const devRight = document.querySelector('.dev-right');
+
+// const slides = document.querySelectorAll('.slideshow img');
+// let current = 0;
 
 // event listener for the header visibility on scroll
 window.addEventListener('scroll', function() {
@@ -42,5 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+handLeft.addEventListener('mouseenter', () => {
+    devLeft.classList.add('hovered');
+});
+handLeft.addEventListener('mouseleave', () => {
+    devLeft.classList.remove('hovered');
+});
+
+handRight.addEventListener('mouseenter', () => {
+    devRight.classList.add('hovered');
+});
+handRight.addEventListener('mouseleave', () => {
+    devRight.classList.remove('hovered');
+});
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slides = document.querySelectorAll('.slideshow img');
+//   let current = 0;
+
+//   function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//       slide.classList.toggle('active', i === index);
+//     });
+//   }
+
+//   function nextSlide() {
+//     current = (current + 1) % slides.length;
+//     showSlide(current);
+//   }
+
+//   showSlide(current);
+//   setInterval(nextSlide, 3000);
+// });
 
 

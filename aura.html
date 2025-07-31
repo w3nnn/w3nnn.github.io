@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura: Generative AI LED Installation - Wenhan Miao</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <header id="main-header">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#creative-projects">Creative + UX</a></li>
+        <li><a href="index.html#technical-projects">Dev + AI</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-page">
+    <section class="project-hero">
+      <h1>Aura: Real-Time Motion Graphics from Music and Movement</h1>
+      <p class="subtitle">Visualizing music and motion through real-time particle animation for live installations and performances.</p>
+      <div class="project-meta">
+        <span><strong>Role:</strong> Creative Coder, Node-Based Visual Designer</span> |
+        <span><strong>Tools:</strong> TouchDesigner</span> |
+        <span><strong>Timeline:</strong> March 2025 - May 2025</span>
+      </div>
+      <div class="module-launch-wrapper">
+        <a href="https://youtu.be/KS_OK4peqlo" target="_blank" class="launch-module-button">
+          <img src="images/aura.png" alt="Aura ClearLED installation preview" class="module-preview-img"/>
+          <span class="launch-text">Watch Demo Video</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="content-text-block">
+        <h2>Project Overview</h2>
+        <p>
+          <strong>Aura</strong> explores the intersection of generative AI, motion, and sound through a real-time audiovisual system built for ClearLED transparent displays. Inspired by the emotional energy of music and human presence, the system visualizes a constantly evolving particle field that feels organic, immersive, and alive.
+        </p>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Concept & Motivation</h2>
+        <p>
+          The name “Aura” stems from the idea that each person emits an emotional field. This system attempts to visualize that energy through fluid motion and audio-reactive visuals. Whether ambient or intense, the music informs the system’s bloom effects, particle speed, color dynamics, and trail intensity.
+        </p>
+      </div>
+
+    <div class="content-text-block">
+        <h2>Process Analysis</h2>
+        <p>
+          The system was developed in TouchDesigner using a node-based workflow. Audio elements like bass, pitch, and melody were extracted using audioAnalysis, while Perlin noise and rule-based logic controlled the natural movement of particles. RGB camera data added a second input layer, enabling visual shifts based on live motion. The final output is a dynamic 3D particle space designed to feel fluid and alive.
+        </p>
+      </div>
+
+
+      <div class="content-text-block">
+        <h2>Challenges & Solutions</h2>
+        <p>One of the main challenges was designing the visuals in a way that wouldn’t overload the system and cause too much lag during live playback. I had to balance the number of particles and visual effects so that performance stayed smooth. At the same time, I needed to arrange the node network carefully to make the particle movement feel fluid and natural, rather than mechanical or rigid. It took several iterations to find a setup that felt alive while staying responsive in real time.</p>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Impact & Outcome</h2>
+        <p>
+          The final system responded smoothly to both mellow and high-energy tracks, creating visuals that felt emotionally in sync with the music. Viewers described it as immersive and aesthetically pleasing, with a strong sense of flow. The project was well-received by peers and instructors, and its modular design means it can be easily adapted for art installations, live performances, or even meditative spaces.
+        </p>
+      </div>
+
+      <div class="content-text-block">
+        <h2>Future Directions</h2>
+        <p>
+          Next steps include integrating camera-based emotion detection models or gesture tracking models to further personalize the visual response. This could allow the system to adapt not just to music and motion, but also to the emotional state of the performers, creating a more interactive and engaging experience. 
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="circularcursor"></div>
+
+  <footer id="contact"> <div class="footer-content">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:wenhanm@sfu.com" class="footer-link">Email Me</a>
+                <a href="https://www.linkedin.com/in/w3nhan/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank" class="footer-link">GitHub</a>
+                </div>
+            <p class="copyright">&copy; 2025 Wenhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
