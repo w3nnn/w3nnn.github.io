@@ -893,6 +893,13 @@ footer p {
     line-height: 1.4;
 }
 
+.module-launch-wrapper .caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px; 
+    line-height: 1.4;
+    text-align: center; 
+}
 
 /* Responsive Adjustments for Project Detail Page */
 @media (max-width: 768px) {
