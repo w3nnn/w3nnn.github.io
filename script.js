@@ -2,6 +2,9 @@ const header = document.getElementById('main-header');
 let lastScrollTop = 0;
 let navVisible = false;
 
+const cursor = document.getElementById('circularcursor');
+
+
 const handLeft = document.querySelector('.hand-left');
 const handRight = document.querySelector('.hand-right');
 
@@ -27,11 +30,22 @@ window.addEventListener('scroll', function() {
 });
 
 //event listener for the circular cursor
-document.addEventListener('mousemove', function(e) {
-    const cursor = document.getElementById('circularcursor');
-    
+document.addEventListener('mousemove', function(e) {    
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
+});
+
+// when hovering on clickable elements
+const clickableElements = document.querySelectorAll('a, .clickable-project, button, input, textarea, select, [role="button"]');
+
+
+clickableElements.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('active');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('active');
+  });
 });
 
 
@@ -63,25 +77,3 @@ handRight.addEventListener('mouseenter', () => {
 handRight.addEventListener('mouseleave', () => {
     devRight.classList.remove('hovered');
 });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const slides = document.querySelectorAll('.slideshow img');
-//   let current = 0;
-
-//   function showSlide(index) {
-//     slides.forEach((slide, i) => {
-//       slide.classList.toggle('active', i === index);
-//     });
-//   }
-
-//   function nextSlide() {
-//     current = (current + 1) % slides.length;
-//     showSlide(current);
-//   }
-
-//   showSlide(current);
-//   setInterval(nextSlide, 3000);
-// });
-
-
