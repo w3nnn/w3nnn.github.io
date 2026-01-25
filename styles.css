@@ -358,6 +358,25 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 630px) {
+    .profile-image-container {
+        display: none !important;
+    }
+
+    .about-intro {
+        /* This ensures the text centers up nicely once the image is gone */
+        padding-right: 0; 
+        text-align: center; 
+        margin: 0 auto;
+    }
+
+    .background-overlay {
+    position: relative;
+    width: 100%;
+    min-height: unset;
+    }
+}
+
 
 /* Intro Text & Content  */
 
@@ -931,11 +950,10 @@ footer p {
 }
 
 .content-image img {
-    max-width: 100%; /* Ensure image fits within its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
-    border-radius: 5px; /* Slightly rounded corners for the image itself */
-    margin: 0 auto 15px auto; /* Center image and add space below it */
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto 15px auto;
 }
 
 .content-image .caption {
@@ -1026,6 +1044,8 @@ footer p {
 
 
 /* about page */
+
+
 .about-section {
 
   padding: 30px 30px;
@@ -1048,12 +1068,6 @@ footer p {
   justify-content: center; 
 }
 
-.profile-photo {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
 
 .about-intro {
   flex: 1;                  /* text takes up half */
@@ -1109,7 +1123,6 @@ footer p {
   width: 100%;
   display: block;
   margin: 0 auto 40px;
-  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 .about-container ul {
@@ -1146,7 +1159,6 @@ footer p {
 
 .slideshow img {
   max-width: 40rem;
-  border-radius: 0.5rem;
   position: absolute;
   top: 0;           /* position all images at the same place */
   left: 50%;
@@ -1163,5 +1175,27 @@ footer p {
   /* don't change position or transform here */
 }
 
+/* This hides the slideshow on smaller screens */
+
+@media (max-width: 1279px) {
+    .slideshow {
+        display: none !important;
+    }
+
+    .about-intro {
+        width: 100%; 
+        padding-right: 30px;
+        max-width: 1000px;
+        /* Center the text container if it's no longer side-by-side with images */
+        margin: 0 auto; 
+    }
+}
+
+/* If you want specific changes for phones (under 1000px), add them here */
+@media (max-width: 1000px) {
+    .about-intro {
+        padding-right: 20px; /* Slightly less padding for smaller screens */
+    }
+  }
 
 
