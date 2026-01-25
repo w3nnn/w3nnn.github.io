@@ -83,7 +83,8 @@ nav ul li a:hover {
 /* Hide cursor on devices that do not use a mouse (touchscreens) */
 @media (pointer: coarse) {
   #circularcursor {
-    display: none;
+    display: none !important;
+    visibility: hidden;
   }
 }
 
