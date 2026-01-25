@@ -878,6 +878,18 @@ footer p {
     color: rgb(96, 85, 80);
 }
 
+.content-text-block a{
+    text-decoration: underline;
+  color: #463c37;
+
+}
+
+.content-text-block a:hover {
+  color: rgb(255, 198, 65);
+  text-decoration: none;
+}
+
+
 .content-text-block ul {
     list-style: disc;
     padding-left: 25px;
