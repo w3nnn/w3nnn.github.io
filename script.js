@@ -3,7 +3,8 @@ let lastScrollTop = 0;
 let navVisible = false;
 
 const cursor = document.getElementById('circularcursor');
-
+// This returns true if the device is a touchscreen
+const isTouchscreen = window.matchMedia('(pointer: coarse)').matches;
 
 const handLeft = document.querySelector('.hand-left');
 const handRight = document.querySelector('.hand-right');
@@ -28,6 +29,19 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = scrollTop;
 });
+
+if (isTouchscreen) {
+  // If it's a touchscreen, hide the cursor immediately
+  if (cursor) cursor.style.display = 'none';
+} else {
+  // Only add the mousemove listener if it's a mouse-driven device
+  document.addEventListener('mousemove', (e) => {
+    if (cursor) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    }
+  });
+}
 
 //event listener for the circular cursor
 document.addEventListener('mousemove', function(e) {    
@@ -64,16 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-handLeft.addEventListener('mouseenter', () => {
-    devLeft.classList.add('hovered');
-});
-handLeft.addEventListener('mouseleave', () => {
-    devLeft.classList.remove('hovered');
-});
+if (handLeft) {
+    handLeft.addEventListener('mouseenter', () => {
+        devLeft.classList.add('hovered');
+    });
 
-handRight.addEventListener('mouseenter', () => {
-    devRight.classList.add('hovered');
-});
-handRight.addEventListener('mouseleave', () => {
-    devRight.classList.remove('hovered');
-});
+    handLeft.addEventListener('mouseleave', () => {
+        devLeft.classList.remove('hovered');
+    });
+}
+
+if (handRight) {
+    handRight.addEventListener('mouseenter', () => {
+        devRight.classList.add('hovered');
+    });
+
+    handRight.addEventListener('mouseleave', () => {
+        devRight.classList.remove('hovered');
+    });
+}

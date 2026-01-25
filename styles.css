@@ -82,11 +82,18 @@ nav ul li a:hover {
 
 /* Hide cursor on devices that do not use a mouse (touchscreens) */
 /* Hide the cursor on any screen smaller than 1024px (Tablets and Phones) */
-@media screen and (max-width: 1024px) {
-  #circularcursor {
+/*-- @media screen and (max-width: 1024px) {
+  /* Hide the custom circle */
+ /*-- #circularcursor {
     display: none !important;
+  } --*/
+
+  /* Force the default browser cursor back for everything */
+ /*-- html, body, a, button, .clickable-project {
+    cursor: auto !important;
   }
-}
+} --*/
+
 
 #circularcursor {
   position: fixed;
