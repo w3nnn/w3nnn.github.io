@@ -81,10 +81,10 @@ nav ul li a:hover {
 /* Custom Cursor, responsive when hovered on clickable elements*/
 
 /* Hide cursor on devices that do not use a mouse (touchscreens) */
-@media (pointer: coarse) {
+/* Hide the cursor on any screen smaller than 1024px (Tablets and Phones) */
+@media screen and (max-width: 1024px) {
   #circularcursor {
     display: none !important;
-    visibility: hidden;
   }
 }
 
