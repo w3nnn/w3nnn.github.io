@@ -15,6 +15,8 @@ const devRight = document.querySelector('.dev-right');
 // let current = 0;
 
 // event listener for the header visibility on scroll
+
+
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -28,7 +30,18 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = scrollTop;
 });
+// Check if device is touch-enabled
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
+if (isTouchDevice) {
+  cursor.style.display = 'none';
+} else {
+  // Only run the mouse movement logic if it's NOT a touch device
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+}
 //event listener for the circular cursor
 document.addEventListener('mousemove', function(e) {    
     cursor.style.left = e.clientX + 'px';
@@ -47,6 +60,9 @@ clickableElements.forEach(el => {
     cursor.classList.remove('active');
   });
 });
+
+
+
 
 
 // event listener for setting the timeout for the pulse effect
