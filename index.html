@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#creative-projects">Creative + UX</a></li>
-                <li><a href="#technical-projects">Dev + AI</a></li>
+                <li class="hide-mobile"><a href="#creative-projects">Creative + UX</a></li>
+                <li class="hide-mobile"><a href="#technical-projects">Dev + AI</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
@@ -388,6 +388,11 @@
             <p class="copyright">&copy; 2025 Wenhan. All rights reserved.</p>
         </div>
     </footer>
+
+    <nav class="mobile-pill" aria-label="Project sections">
+        <a href="#creative-projects" class="pill-link" data-section="creative-projects">Creative</a>
+        <a href="#technical-projects" class="pill-link" data-section="technical-projects">Dev</a>
+    </nav>
 
     <script src="script.js"></script>
 

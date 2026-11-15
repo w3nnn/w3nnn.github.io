@@ -1191,11 +1191,36 @@ footer p {
     }
 }
 
-/* If you want specific changes for phones (under 1000px), add them here */
-@media (max-width: 1000px) {
-    .about-intro {
-        padding-right: 20px; /* Slightly less padding for smaller screens */
-    }
-  }
+
+  .mobile-pill { display: none; }
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+
+.mobile-pill {
+  background: rgba(96, 85, 80, 0.9);   /* same family as your header */
+}
+
+.pill-link {
+  color: rgb(251, 240, 213);           /* cream */
+}
+
+.pill-link.active {
+  background: rgb(255, 198, 65);       /* your cursor/footer yellow */
+  color: rgb(70, 60, 55);
+}
+
+  html { scroll-behavior: smooth; }
+
+  #creative-projects,
+  #technical-projects { scroll-margin-top: 70px; } /* match your header height */
+
+@media (hover: none), (pointer: coarse) {
+  #circularcursor { display: none; }
+  body, a, a:hover { cursor: auto; }
+}
+
+  footer { padding-bottom: 90px; } /* so the pill never covers footer links */
+}
 
 
