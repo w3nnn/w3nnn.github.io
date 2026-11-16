@@ -27,6 +27,7 @@ a:hover {
 
 
 header {
+  box-sizing: border-box;
   background-color: rgba(96, 85, 80, 0.8);
   color:rgb(251, 240, 213);
   padding: 16px;
